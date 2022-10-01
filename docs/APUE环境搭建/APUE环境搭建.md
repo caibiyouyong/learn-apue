@@ -27,7 +27,7 @@ APUE：<http://www.apuebook.com/code3e.html>
 
 1. 
 ![1530766056596.png](image/1530766056596.png)
-
+解决方法
 ```
 root@ubuntu16x64:~/github/UNIX_Programming_Manual/apue/apue.3e# apt-get install libbsd-dev  
 正在读取软件包列表... 完成
@@ -48,16 +48,16 @@ root@ubuntu16x64:~/github/UNIX_Programming_Manual/apue/apue.3e# apt-get install 
 正在设置 libbsd-dev:amd64 (0.8.2-1) ...
 ```
 2. 在CentOS-7.7下解压源代码文件后进行编译，报错信息为：
-
+```
 gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  barrier.c -o barrier  -L../lib -lapue -pthread -lrt -lbsd
 /tmp/cc6Z8vzR.o: In function `thr_fn':
 barrier.c:(.text+0x80): undefined reference to `heapsort'
 collect2: error: ld returned 1 exit status
 make[1]: *** [barrier] Error 1
-
 ```
-yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm libbsd libbsd-devel
-
+解决办法：
+```
+apt-get install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm libbsd libbsd-devel
 ```
 
 ## 编译过程
