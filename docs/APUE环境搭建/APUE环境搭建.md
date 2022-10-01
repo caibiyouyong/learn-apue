@@ -23,7 +23,7 @@ APUE：<http://www.apuebook.com/code3e.html>
 
 ## 编译
 
-````
+```
 小插曲：增加一小段centos下的环境安装方法
 
 -------------------------此段是centos系统下环境安装过程的起始位置--------------------------
@@ -31,7 +31,7 @@ APUE：<http://www.apuebook.com/code3e.html>
 假设处于root用户，其他权限用户请自行sudo，目录也可以自己酌情更改
 
 shell里面逐句执行：
-```
+
 yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm libbsd libbsd-devel
 curl -P ~/ http://www.apuebook.com/src.3e.tar.gz
 cd ~/
@@ -39,25 +39,26 @@ tar -zxvf src.3e.tar
 cd apue.3e/
 cp lib/error.c include/
 vi include/apue.h
-```
+
+
 在打开文件的
-```
+
 #endif /* _APUE_H */
-```
+
 语句前添加一行
-```
+
 #include "error.c"
-```
+
 保存退出，之后shell继续逐句执行
-```
+
 make
 cp include/apue.h include/error.c /usr/include/
 cp lib/libapue.a /usr/local/lib/
-```
+
 之后便可以引入头文件"apue.h"
 
 -------------------------此段是centos系统下环境安装过程的结束位置--------------------------
-````
+```
 
 ## 常见报错
 
