@@ -21,13 +21,44 @@ APUE：<http://www.apuebook.com/code3e.html>
 ![1530766324344.png](image/1530766324344.png)
 
 
+## 编译
 
-## 常见问题解决
+小插曲：增加一小段centos下的环境安装方法
+-------------------------此段是centos系统下的过程--------------------------
+假设处于root用户，其他权限用户请自行sudo，目录也可以自己酌情更改
+shell里面逐句执行：
+```
+yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm libbsd libbsd-devel
+curl -P ~/ http://www.apuebook.com/src.3e.tar.gz
+cd ~/
+tar -zxvf src.3e.tar
+cd apue.3e/
+cp lib/error.c include/
+vi include/apue.h
+```
+在打开文件的
+```
+#endif /* _APUE_H */
+```
+语句前添加一行
+```
+#include "error.c"
+```
+保存退出，之后shell继续逐句执行
+```
+make
+cp include/apue.h include/error.c /usr/include/
+cp lib/libapue.a /usr/local/lib/
+```
+之后便可以引入头文件"apue.h"
+-------------------------此段是centos系统下的过程--------------------------
+
+## 常见报错
 
 
-1. 如图
-![1530766056596.png](image/1530766056596.png)
-解决办法
++ 如图
+	![1530766056596.png](image/1530766056596.png)
++ 解决办法
 ```
 root@ubuntu16x64:~/github/UNIX_Programming_Manual/apue/apue.3e# apt-get install libbsd-dev  
 正在读取软件包列表... 完成
@@ -47,18 +78,7 @@ root@ubuntu16x64:~/github/UNIX_Programming_Manual/apue/apue.3e# apt-get install 
 正在处理用于 man-db (2.7.5-1) 的触发器 ...
 正在设置 libbsd-dev:amd64 (0.8.2-1) ...
 ```
-2. 在CentOS-7.7下解压源代码文件后进行编译，报错信息为：
-```
-gcc -ansi -I../include -Wall -DLINUX -D_GNU_SOURCE  barrier.c -o barrier  -L../lib -lapue -pthread -lrt -lbsd
-/tmp/cc6Z8vzR.o: In function `thr_fn':
-barrier.c:(.text+0x80): undefined reference to `heapsort'
-collect2: error: ld returned 1 exit status
-make[1]: *** [barrier] Error 1
-```
-解决办法：
-```
-apt-get install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm libbsd libbsd-devel
-```
+
 
 ## 编译过程
 
