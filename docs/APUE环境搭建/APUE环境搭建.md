@@ -24,8 +24,11 @@ APUE：<http://www.apuebook.com/code3e.html>
 ## 编译
 
 小插曲：增加一小段centos下的环境安装方法
+
 -------------------------此段是centos系统下的过程--------------------------
+
 假设处于root用户，其他权限用户请自行sudo，目录也可以自己酌情更改
+
 shell里面逐句执行：
 ```
 yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm libbsd libbsd-devel
@@ -51,6 +54,7 @@ cp include/apue.h include/error.c /usr/include/
 cp lib/libapue.a /usr/local/lib/
 ```
 之后便可以引入头文件"apue.h"
+
 -------------------------此段是centos系统下的过程--------------------------
 
 ## 常见报错
