@@ -25,7 +25,8 @@ APUE：<http://www.apuebook.com/code3e.html>
 ## 常见问题解决
 
 
-1. ![1530766056596.png](image/1530766056596.png)
+1. 
+![1530766056596.png](image/1530766056596.png)
 
 ```
 root@ubuntu16x64:~/github/UNIX_Programming_Manual/apue/apue.3e# apt-get install libbsd-dev  
