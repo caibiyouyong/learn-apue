@@ -1,7 +1,7 @@
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [APUE环境搭建](#apue环境搭建)
-- [官方网址](##官方网址)
+	- [官方网址](##官方网址)
 - [centos](##centos)
 - [ubuntu](##ubuntu)
 - [常见问题解决](###常见问题解决)
@@ -16,11 +16,11 @@
 # APUE环境搭建
 
 
-## 官方网址
+	## 官方网址
 
-APUE：<http://www.apuebook.com/code3e.html>
+	APUE：<http://www.apuebook.com/code3e.html>
 
-![1530766324344.png](image/1530766324344.png)
+	![1530766324344.png](image/1530766324344.png)
 
 
 ## centos
