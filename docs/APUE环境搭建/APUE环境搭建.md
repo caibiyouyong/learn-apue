@@ -2,10 +2,12 @@
 
 - [APUE环境搭建](#apue环境搭建)
 	- [官方网址](#官方网址)
-	- [常见问题解决](#常见问题解决)
-	- [编译过程](#编译过程)
-	- [后续操作](#后续操作)
-	- [Makefile](#makefile)
+	- [centos](## centos)
+	- [ubuntu](## ubuntu)
+		- [常见问题解决](###常见问题解决)
+		- [编译过程](###编译过程)
+		- [后续操作](###后续操作)
+		- [Makefile](###makefile)
 	- [库文件使用](#库文件使用)
 	- [END](#end)
 
@@ -21,7 +23,7 @@ APUE：<http://www.apuebook.com/code3e.html>
 ![1530766324344.png](image/1530766324344.png)
 
 
-## 编译
+## centos
 
 ```
 小插曲：增加一小段centos下的环境安装方法
@@ -59,8 +61,8 @@ cp lib/libapue.a /usr/local/lib/
 
 -------------------------此段是centos系统下环境安装过程的结束位置--------------------------
 ```
-
-## 常见报错
+## ubuntu
+### 常见问题解决
 
 
 + 如图
@@ -87,7 +89,7 @@ root@ubuntu16x64:~/github/UNIX_Programming_Manual/apue/apue.3e# apt-get install 
 ```
 
 
-## 编译过程
+### 编译过程
 
 ```
 root@ubuntu16x64:~/github/UNIX_Programming_Manual/apue/apue.3e# make
@@ -488,7 +490,7 @@ make[1]: Leaving directory '/root/github/UNIX_Programming_Manual/apue/apue.3e/ex
 root@ubuntu16x64:~/github/UNIX_Programming_Manual/apue/apue.3e#
 ```
 
-## 后续操作
+### 后续操作
 
 
 复制相关头文件到include路径
@@ -498,7 +500,7 @@ root@ubuntu16x64:~# cp include/apue.h /usr/include/
 root@ubuntu16x64:~# cp lib/libapue.a /usr/local/lib/
 ```
 
-## Makefile
+### Makefile
 
 ![1530766270952.png](image/1530766270952.png)
 
