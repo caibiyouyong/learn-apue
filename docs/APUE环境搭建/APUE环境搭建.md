@@ -1,15 +1,15 @@
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [APUE环境搭建](#apue环境搭建)
-	- [官方网址](##官方网址)
-	- [centos](##centos)
-	- [ubuntu](##ubuntu)
-		- [常见问题解决](###常见问题解决)
-		- [编译过程](###编译过程)
-		- [后续操作](###后续操作)
-		- [Makefile](###makefile)
-	- [库文件使用](##库文件使用)
-	- [END](##end)
+- [官方网址](##官方网址)
+- [centos](##centos)
+- [ubuntu](##ubuntu)
+- [常见问题解决](###常见问题解决)
+- [编译过程](###编译过程)
+- [后续操作](###后续操作)
+- [Makefile](###makefile)
+- [库文件使用](##库文件使用)
+- [END](##end)
 
 <!-- /TOC -->
 
